@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html,
+body {
+	background-color: #000;
+	overflow: hidden;
+}
+
+canvas {
+	width: 100vw;
+	height: 100vh;
+}
+
+.score {
+	position: absolute;
+	top: 40px;
+	left: 50vw;
+	transform: translate(-50%, 0);
+	color: #fff;
+	font-size: 64px;
+	font-family: 'Press Start 2P', cursive;
+	filter: drop-shadow(0 0 10px #fff);
+}
+
+.score.rainbow {
+	animation: rainbowAnim 1s infinite;
+}
+
+@keyframes rainbowAnim {
+	0% {
+		filter: drop-shadow(0 0 10px red);
+		color: #f88; /*#f00 */
+	}
+	16.666% {
+		filter: drop-shadow(0 0 10px orange);
+		color: #f88; /*#f80 */
+	}
+	33.333% {
+		filter: drop-shadow(0 0 10px yellow);
+		color: #ff8; /*#ff0 */
+	}
+	50% {
+		filter: drop-shadow(0 0 10px green);
+		color: #8f8; /*#0f0 */
+	}
+	66.666% {
+		filter: drop-shadow(0 0 10px blue);
+		color: #88f; /*#00f */
+	}
+	83.333% {
+		filter: drop-shadow(0 0 10px indigo);
+		color: #88f; /*#80f */
+	}
+	100% {
+		filter: drop-shadow(0 0 10px violet);
+		color: #f8f; /*#f0f */
+	}
+}
